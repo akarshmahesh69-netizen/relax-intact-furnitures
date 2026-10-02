@@ -1,0 +1,55 @@
+---
+// Identical on both pages (home and products.html carried byte-identical copies of this form).
+---
+<form class="enquiry" id="enquiryForm" novalidate>
+  <div class="field-row">
+    <div class="field">
+      <label for="fName">Name</label>
+      <input type="text" id="fName" name="name" required autocomplete="name" aria-describedby="eName" />
+      <span class="field-error" id="eName">Enter your name so we know who to ask for.</span>
+    </div>
+    <div class="field">
+      <label for="fCompany">Company <span class="opt">(optional)</span></label>
+      <input type="text" id="fCompany" name="company" autocomplete="organization" />
+    </div>
+  </div>
+  <div class="field-row">
+    <div class="field">
+      <label for="fPhone">Phone</label>
+      <input type="tel" id="fPhone" name="phone" required autocomplete="tel" inputmode="tel" aria-describedby="ePhone" />
+      <span class="field-error" id="ePhone">Enter a phone number with at least 10 digits.</span>
+    </div>
+    <div class="field">
+      <label for="fEmail">Email <span class="opt">(optional)</span></label>
+      <input type="email" id="fEmail" name="email" autocomplete="email" aria-describedby="eEmail" />
+      <span class="field-error" id="eEmail">That email address looks incomplete.</span>
+    </div>
+  </div>
+  <div class="field">
+    <label for="fRequirement">Requirement</label>
+    <select id="fRequirement" name="requirement">
+      <option value="">Select requirement</option>
+      <option>Office Chairs</option>
+      <option>Executive Chairs</option>
+      <option>Computer Chairs</option>
+      <option>Visitor Chairs</option>
+      <option>Office Tables</option>
+      <option>Cupboards</option>
+      <option>Sofas &amp; Lounge Seating</option>
+      <option>Café &amp; Bar Seating</option>
+      <option>Custom order</option>
+      <option>Vertical Blinds</option>
+      <option>Repair</option>
+      <option>Cleaning</option>
+      <option>Free furniture guide</option>
+      <option>Other</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="fMessage">Message <span class="opt">(optional)</span></label>
+    <textarea id="fMessage" name="message" placeholder="Number of pieces, office location, timeline..."></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send enquiry</button>
+  <p class="form-note">We reply to enquiries directly. No account or checkout required.</p>
+  <div class="form-success" id="formSuccess" role="status">Enquiry received. We'll get back to you shortly on the phone number provided.</div>
+</form>

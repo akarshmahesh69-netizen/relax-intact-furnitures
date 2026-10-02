@@ -1,0 +1,896 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EnquiryForm from '../components/EnquiryForm.astro';
+---
+<Layout
+  page="home"
+  title="Relax Intact Furnitures | Office Furniture & Workplace Maintenance, Bangalore"
+  description="Relax Intact manufactures and supplies office chairs, tables, cupboards and blinds, and services them with repair, servicing and cleaning. Bangalore."
+  ogTitle="Relax Intact Furnitures | Office Furniture & Workplace Maintenance, Bangalore"
+  ogDescription="Office chairs, tables, cupboards and blinds, made in Bangalore, plus repair, servicing and cleaning from the same vendor."
+>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home" aria-labelledby="heroTitle">
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <div class="hero-copy">
+          <div class="hero-photo-mobile" aria-hidden="true"></div>
+          <div class="hero-head">
+            <p class="eyebrow hero-eyebrow">FURNITURE MANUFACTURING · SUPPLY · SERVICE</p>
+            <h1 id="heroTitle" class="hero-title" tabindex="-1"><span>A Complete Partner</span><span>for <em>Better Spaces</em>.</span></h1>
+          </div>
+          <p class="hero-lede"><span class="lede-full">From crafted furniture and custom requirements to reliable supply and ongoing care, we bring the entire furniture journey all together under one roof.</span><span class="lede-short">From crafted furniture to reliable supply and ongoing care, the whole furniture journey under one roof.</span></p>
+          <div class="hero-cta-stack">
+            <button type="button" class="btn btn-guide" data-req="Free furniture guide">
+              <svg class="guide-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 3h8l4 4v14H6z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3v4h4M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Free Furniture Guide</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </button>
+            <div class="hero-ctas">
+              <a href="#products" class="btn btn-primary btn-lg">Explore products</a>
+              <a href="#contact" class="btn btn-outline btn-lg">Talk to us <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="orbit-stage" id="orbit" role="group" aria-label="Product showcase">
+        <svg class="orbit-lines" aria-hidden="true" focusable="false"><g class="rails"></g><g class="links"></g></svg>
+
+        <button type="button" class="orbit-item" data-id="executive" data-product-req="Executive Chairs" data-name="Executive chairs" data-desc="High-back seating for cabins and leadership spaces, in leather or premium fabric." data-chips="High-back|Leather or fabric|Padded headrest">
+          <span class="oi-body"><img class="oi-img" src="/images/product-executive-chair.webp" width="1224" height="1290" alt="Tan leather high-back executive chair with a polished aluminium base" decoding="async" fetchpriority="high" /></span>
+          <span class="oi-label" aria-hidden="true">Executive chairs</span>
+        </button>
+        <button type="button" class="orbit-item" data-id="tables" data-product-req="Office Tables" data-name="Office tables" data-desc="Workstations, cabin tables and modular desks for offices of any size." data-chips="Cabin desk|Side drawer unit|Cable management">
+          <span class="oi-body"><img class="oi-img" src="/images/product-desk.webp" width="1536" height="1024" alt="Executive office desk in walnut and charcoal with a lockable side drawer unit" decoding="async" /></span>
+          <span class="oi-label" aria-hidden="true">Office tables</span>
+        </button>
+        <button type="button" class="orbit-item" data-id="cupboards" data-product-req="Cupboards" data-name="Cupboards" data-desc="Storage units and filing cabinets for documents, stationery and supplies." data-chips="Lockable|Glass-door shelves|Filing">
+          <span class="oi-body"><img class="oi-img" src="/images/product-cupboard.webp" width="1299" height="1211" alt="Walnut and charcoal storage cupboard with lockable doors and glass-front shelves" decoding="async" /></span>
+          <span class="oi-label" aria-hidden="true">Cupboards</span>
+        </button>
+        <button type="button" class="orbit-item" data-id="computer" data-product-req="Computer Chairs" data-name="Computer chairs" data-desc="Adjustable seating for computer workstations and shared desks." data-chips="Mesh back|Headrest|Adjustable armrests">
+          <span class="oi-body"><img class="oi-img" src="/images/product-computer-chair.webp" width="1256" height="1256" alt="Black mesh computer chair with a headrest and adjustable armrests" decoding="async" /></span>
+          <span class="oi-label" aria-hidden="true">Computer chairs</span>
+        </button>
+        <button type="button" class="orbit-item" data-id="visitor" data-product-req="Visitor Chairs" data-name="Visitor chairs" data-desc="Bench and standalone seating for receptions, waiting areas and meeting rooms." data-chips="Cantilever frame|Reception|Meeting rooms">
+          <span class="oi-body"><img class="oi-img" src="/images/product-visitor-chair.webp" width="1300" height="1211" alt="Black leather visitor chair on a chrome cantilever frame" decoding="async" /></span>
+          <span class="oi-label" aria-hidden="true">Visitor chairs</span>
+        </button>
+        <button type="button" class="orbit-item" data-id="blinds" data-product-req="Vertical Blinds" data-name="Vertical blinds" data-desc="Window blinds fitted for cabins, meeting rooms and open-plan offices." data-chips="Fabric vanes|Cabins|Meeting rooms">
+          <span class="oi-body"><img class="oi-img" src="/images/product-blinds.webp" width="1376" height="1128" alt="Vertical window blinds in a warm grey woven fabric" decoding="async" /></span>
+          <span class="oi-label" aria-hidden="true">Vertical blinds</span>
+        </button>
+
+        <div class="stamp" aria-hidden="true">
+          <span class="stamp-ring"></span>
+          <span>Made in<br/>India</span>
+        </div>
+      </div>
+      <div class="orbit-now">
+        <p class="on-line"><b id="orbitCount">01 / 06</b><span id="orbitName">Executive chairs</span></p>
+      </div>
+      <p class="sr-only" id="orbitLive" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTS ================= -->
+  <!-- One highlight per category on a pinned horizontal reel; the full range lives on /products.
+       Compact by design: heading, one line and the cards share a single sticky panel. -->
+  <section class="products-reel reel" id="products" aria-label="Products">
+    <div class="reel-pin">
+      <div class="reel-head">
+        <div class="reel-head-text">
+          <span class="eyebrow eyebrow-highlight">Products</span>
+          <h2>Furniture for every workspace</h2>
+          <p>One highlight from each range.</p>
+        </div>
+        <div class="reel-actions">
+          <a class="btn btn-primary reel-btn" href="/products"><span>Explore range</span><span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-outline reel-btn reel-call" href="tel:+919886490295" aria-label="Call us on 98864 90295">
+            <svg class="call-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C10 21 3 14 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span>Call us</span>
+          </a>
+        </div>
+      </div>
+      <div class="reel-track" id="reelTrack">
+        <a class="reel-card" href="/products#seating">
+          <span class="reel-photo"><img src="/images/cutouts/executive-chair.webp" width="537" height="851" alt="Tan leather high-back executive chair" loading="lazy" decoding="async" /></span>
+          <h3>Office &amp; Executive Seating <span class="arrow" aria-hidden="true">→</span></h3>
+          <p>Office chairs, executive chairs, computer chairs.</p>
+        </a>
+        <a class="reel-card reel-card--wide" href="/products#office-furniture">
+          <span class="reel-photo"><img src="/images/cutouts/desk.webp" width="970" height="498" alt="Walnut and charcoal office desk with a drawer unit" loading="lazy" decoding="async" /></span>
+          <h3>Office Furniture <span class="arrow" aria-hidden="true">→</span></h3>
+          <p>Desks, workstations, office solutions.</p>
+        </a>
+        <a class="reel-card" href="/products#storage">
+          <span class="reel-photo"><img src="/images/cutouts/cupboard.webp" width="599" height="788" alt="Walnut and charcoal storage cupboard" loading="lazy" decoding="async" /></span>
+          <h3>Storage <span class="arrow" aria-hidden="true">→</span></h3>
+          <p>Cupboards and filing cabinets.</p>
+        </a>
+        <a class="reel-card reel-card--wide" href="/products#sofas">
+          <span class="reel-photo"><img src="/images/cutouts/sofa.webp" width="781" height="383" alt="Three-seater fabric sofa" loading="lazy" decoding="async" /></span>
+          <h3>Sofas &amp; Lounge Seating <span class="arrow" aria-hidden="true">→</span></h3>
+          <p>Sofas, lounge chairs, multi-seater chairs.</p>
+        </a>
+        <a class="reel-card" href="/products#cafe">
+          <span class="reel-photo"><img src="/images/cutouts/bar-stool.webp" width="594" height="826" alt="Bar stool with a gold frame and white seat" loading="lazy" decoding="async" /></span>
+          <h3>Café &amp; Bar Seating <span class="arrow" aria-hidden="true">→</span></h3>
+          <p>Café chairs and bar stools.</p>
+        </a>
+        <a class="reel-card" href="/products#blinds">
+          <span class="reel-photo"><img src="/images/cutouts/blinds.webp" width="718" height="701" alt="Vertical window blinds" loading="lazy" decoding="async" /></span>
+          <h3>Vertical Blinds <span class="arrow" aria-hidden="true">→</span></h3>
+          <p>Supply and installation.</p>
+        </a>
+        <a class="reel-card reel-card--service" href="#contact" data-req="Custom order">
+          <span class="reel-photo"><img src="/images/category-custom.webp" width="720" height="600" alt="Craftsman fitting a wooden chair frame beside fabric swatches" loading="lazy" decoding="async" /></span>
+          <h3>Custom / Made-to-Order <span class="arrow" aria-hidden="true">→</span></h3>
+          <p>Built to your size, fabric and finish.</p>
+        </a>
+        <a class="reel-card reel-card--service" href="#contact" data-req="Repair">
+          <span class="reel-photo"><img src="/images/category-repair.webp" width="720" height="540" alt="Hands re-upholstering a chair seat with a staple gun" loading="lazy" decoding="async" /></span>
+          <h3>Repairs, Servicing &amp; Cleaning <span class="arrow" aria-hidden="true">→</span></h3>
+          <p>All types of chairs and furniture.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section section-alt band-maroon" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow eyebrow-highlight">Services</span>
+        <h2>Beyond supply: upkeep included</h2>
+        <p>We manufacture it, deliver it, and keep it working. One vendor for the furniture and everything it needs afterward.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="media-frame">
+            <img src="/images/service-manufacturing.webp" width="900" height="900" alt="Carpenter sanding a wooden chair frame by hand in the workshop" loading="lazy" decoding="async" />
+          </div>
+          <div class="service-body">
+            <span class="service-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 6.5 18 3l3 3-3.5 3.5M3 21l7-7M8.5 12.5 15 6l3 3-6.5 6.5-3-3Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="service-num">Manufacturing</span></span>
+            <h3>Built at Our Own Facility</h3>
+            <p class="svc-desc-full">Every chair, table and cupboard is manufactured at our own facility in Bangalore. We oversee production from the raw material to the finished piece.</p>
+            <p class="svc-desc-short">Manufactured in-house at our own Bangalore facility.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="media-frame">
+            <img src="/images/service-sales.webp" width="900" height="900" alt="Handing over a newly delivered office chair, still wrapped, to a customer" loading="lazy" decoding="async" />
+          </div>
+          <div class="service-body">
+            <span class="service-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="7.5" cy="18" r="1.6" stroke="currentColor" stroke-width="1.7"/><circle cx="17.5" cy="18" r="1.6" stroke="currentColor" stroke-width="1.7"/></svg><span class="service-num">Sales</span></span>
+            <h3>Direct Supply, No Middleman</h3>
+            <p class="svc-desc-full">We supply chairs, tables, cupboards and blinds directly from our own stock. There is no dealer in between, so pricing and delivery stay straightforward.</p>
+            <p class="svc-desc-short">Supplied directly from our own stock, no dealer markup.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="media-frame">
+            <img src="/images/service-repair.webp" width="900" height="900" alt="Hand-stitching the leather seat of a chair on a workshop bench" loading="lazy" decoding="async" />
+          </div>
+          <div class="service-body">
+            <span class="service-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5l-6 6 2.4 2.4 6-6a4 4 0 0 0 5-5.4l-2.6 2.6-2-2 2.6-2.6Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="service-num">Repair</span></span>
+            <h3>Frame, Fabric &amp; Mechanism Repair</h3>
+            <p class="svc-desc-full">Frames, mechanisms and upholstery are repaired by our own technicians. A damaged chair or sofa can usually be restored rather than replaced.</p>
+            <p class="svc-desc-short">Frames, mechanisms and upholstery restored by our technicians.</p>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="media-frame">
+            <img src="/images/service-cleaning.webp" width="900" height="900" alt="Deep-cleaning an office chair seat with a fabric shampoo extractor" loading="lazy" decoding="async" />
+          </div>
+          <div class="service-body">
+            <span class="service-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg><span class="service-num">Cleaning</span></span>
+            <h3>Fabric &amp; Leather Shampoo Wash</h3>
+            <p class="svc-desc-full">Our team deep cleans fabric and leather seating on site or at our workshop. Stains, dust and daily wear are removed without new upholstery.</p>
+            <p class="svc-desc-short">Fabric and leather deep-cleaned on site or at our workshop.</p>
+          </div>
+        </div>
+      </div>
+      <div class="services-cta">
+        <a class="btn btn-outline reel-btn services-call" href="tel:+919886490295" aria-label="Call us on 98864 90295">
+          <svg class="call-ico" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C10 21 3 14 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          <span>Prefer to talk? Call us: 98864 90295</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY / ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="wrap why-grid">
+      <div class="why-copy">
+        <span class="eyebrow eyebrow-highlight">Why Relax Intact</span>
+        <h2><span class="why-h2-full">One vendor for furniture and its upkeep</span><span class="why-h2-short">One vendor, furniture and upkeep</span></h2>
+        <p class="why-desc-full">Most offices manage furniture purchase and furniture maintenance as two separate problems, with two separate vendors. <span class="brand-highlight">Relax Intact</span> handles both, for businesses furnishing a full office and for individuals furnishing a home workspace.</p>
+        <p class="why-desc-short">One vendor manages both furniture and its upkeep, for offices and home workspaces alike.</p>
+        <div class="slats" aria-hidden="true" style="margin-top: var(--space-5);">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="why-image">
+          <img src="https://images.pexels.com/photos/5444195/pexels-photo-5444195.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcset="https://images.pexels.com/photos/5444195/pexels-photo-5444195.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/5444195/pexels-photo-5444195.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" sizes="(max-width: 900px) 92vw, 38vw" width="800" height="640" alt="Modern conference room furnished with a wooden table and ergonomic chairs" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <ul class="why-list">
+        <li>
+          <span class="n" aria-hidden="true"></span>
+          <span>Products and services from a single vendor, no separate contractor for repairs.</span>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true"></span>
+          <span>Manufacturing and supply under one roof, from cabin furniture to reception seating.</span>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true"></span>
+          <span>Repair, servicing and cleaning for furniture already in use, not only new purchases.</span>
+        </li>
+        <li>
+          <span class="n" aria-hidden="true"></span>
+          <span>Direct enquiry process, with no dealer layers between you and the manufacturer.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= USE CASES ================= -->
+  <section class="section section-alt band-gold" id="use-cases">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow eyebrow-highlight">Use cases</span>
+        <h2>Built for how offices and home workspaces actually change</h2>
+      </div>
+
+      <div class="usecase-grid">
+        <div class="usecase-card">
+          <div class="media-frame">
+            <img src="https://images.pexels.com/photos/273671/pexels-photo-273671.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcset="https://images.pexels.com/photos/273671/pexels-photo-273671.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/273671/pexels-photo-273671.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 30vw" width="800" height="533" alt="Newly fitted-out office pod with desks and rolling chairs" loading="lazy" decoding="async" />
+          </div>
+          <div class="usecase-body">
+            <h3>New Office Setup</h3>
+            <p>Furnishing a new office from scratch: chairs, tables, cupboards and blinds specified and supplied together.</p>
+          </div>
+        </div>
+        <div class="usecase-card">
+          <div class="media-frame">
+            <img src="https://images.pexels.com/photos/28160884/pexels-photo-28160884.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcset="https://images.pexels.com/photos/28160884/pexels-photo-28160884.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/28160884/pexels-photo-28160884.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 30vw" width="800" height="533" alt="Renovated meeting room with new chairs and vertical blinds" loading="lazy" decoding="async" />
+          </div>
+          <div class="usecase-body">
+            <h3>Office Renovation</h3>
+            <p>Replacing or upgrading furniture during a renovation or move, without disrupting daily work.</p>
+          </div>
+        </div>
+        <div class="usecase-card">
+          <div class="media-frame">
+            <img src="https://images.pexels.com/photos/31567147/pexels-photo-31567147.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcset="https://images.pexels.com/photos/31567147/pexels-photo-31567147.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/31567147/pexels-photo-31567147.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 30vw" width="800" height="533" alt="Craftsman restoring a wooden chair frame in a workshop" loading="lazy" decoding="async" />
+          </div>
+          <div class="usecase-body">
+            <h3>Furniture Maintenance</h3>
+            <p>Keeping existing chairs and sofas in working condition through repair and cleaning.</p>
+          </div>
+        </div>
+        <div class="usecase-card">
+          <div class="media-frame">
+            <img src="https://images.pexels.com/photos/19199263/pexels-photo-19199263.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcset="https://images.pexels.com/photos/19199263/pexels-photo-19199263.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/19199263/pexels-photo-19199263.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 30vw" width="800" height="533" alt="Rows of desks and chairs in a classroom" loading="lazy" decoding="async" />
+          </div>
+          <div class="usecase-body">
+            <h3>Schools &amp; Institutions</h3>
+            <p>Classroom furniture, staff seating and bulk institutional orders, supplied and maintained together.</p>
+          </div>
+        </div>
+        <div class="usecase-card">
+          <div class="media-frame">
+            <img src="https://images.pexels.com/photos/3958959/pexels-photo-3958959.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcset="https://images.pexels.com/photos/3958959/pexels-photo-3958959.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/3958959/pexels-photo-3958959.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 30vw" width="800" height="533" alt="Home office with desk, leather chair and natural light" loading="lazy" decoding="async" />
+          </div>
+          <div class="usecase-body">
+            <h3>Home &amp; Individual Workspaces</h3>
+            <p>Single chairs, desks and blinds for home offices and individual buyers, not only bulk office orders.</p>
+          </div>
+        </div>
+        <div class="usecase-card usecase-cta">
+          <div class="media-frame usecase-cta-panel">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3C7 3 3 6.6 3 11c0 2.4 1.2 4.6 3.2 6.1-.1 1-.5 2-1.2 2.9-.2.2 0 .6.3.5 1.6-.3 3-1 4-1.8.9.2 1.8.3 2.7.3 5 0 9-3.6 9-8s-4-8-9-8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8.5 10.5h7M8.5 13.5h4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <div class="usecase-body">
+            <h3>Not Sure What You Need?</h3>
+            <p>Tell us a little about your space, and we'll help you work out the right furniture for it.</p>
+            <a class="card-enquire" href="#contact">Talk to us →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section section-alt band-rose" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <span class="eyebrow eyebrow-highlight">Contact</span>
+        <h2>Let's set up your workspace.</h2>
+        <p>Tell us what you need. We'll get back with options, pricing and lead times.</p>
+
+        <div class="contact-info">
+          <div class="contact-info-row">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2C10 21 3 14 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span>Call us at <a href="tel:+919886490295">98864 90295</a></span>
+          </div>
+          <div class="contact-info-row">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Relax Intact, Manufacturers of Office Furnitures, Lalbagh Fort Road, Minerva Circle, Bangalore 560 004</span>
+          </div>
+          <div class="contact-info-row">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.6"/><path d="M4 6l8 7 8-7" stroke="currentColor" stroke-width="1.6"/></svg>
+            <span>Prefer email? <a href="#contact">Use the enquiry form →</a></span>
+          </div>
+        </div>
+
+        <div class="contact-image">
+          <img src="https://images.pexels.com/photos/31236091/pexels-photo-31236091.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcset="https://images.pexels.com/photos/31236091/pexels-photo-31236091.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/31236091/pexels-photo-31236091.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" sizes="(max-width: 900px) 92vw, 50vw" width="800" height="450" alt="Warm, comfortable workspace with an ergonomic chair and desk" loading="lazy" decoding="async" />
+        </div>
+      </div>
+
+      <div>
+        <EnquiryForm />
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+/* ============================================================
+   HERO — product orbit (2.5D, GSAP-driven) — home page only
+   ============================================================ */
+.hero{
+  position: relative;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(60% 70% at 92% 8%, rgba(231,209,158,0.45) 0%, rgba(231,209,158,0) 60%),
+    radial-gradient(45% 55% at 0% 100%, rgba(110,18,32,0.07) 0%, rgba(110,18,32,0) 65%);
+}
+.hero-grid{
+  position: relative;
+  display:grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-areas: "left stage";
+  column-gap: var(--space-5);
+  align-items: stretch;
+}
+.hero-left{ grid-area: left; display: flex; min-width: 0; }
+.hero-copy{
+  grid-area: copy;
+  width: fit-content; max-width: 100%;
+  display: flex; flex-direction: column; justify-content: flex-start;
+}
+
+.hero-title{
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(2.1rem, 4.2vw, 3.7rem);
+  line-height: 1.04; letter-spacing: -0.025em;
+  max-width: none; color: var(--ink);
+  text-wrap: balance;
+}
+.hero-title span{ display: block; }
+.hero-title em{ font-style: normal; color: var(--maroon); }
+.hero-eyebrow{
+  display: flex; justify-content: center; text-align: center; margin: 0 0 var(--space-3);
+  font-size: 0.78rem; font-weight: 700; line-height: 1.5;
+  letter-spacing: 0.04em; color: var(--maroon);
+  text-wrap: balance;
+}
+.hero-eyebrow::before{ display: none; }
+.hero-lede{
+  margin: var(--space-3) 0 auto;
+  font-size: clamp(1.02rem, 1.5vw, 1.2rem); line-height: 1.6;
+  color: var(--ink);
+  max-width: none;
+}
+.hero-lede strong{ font-weight: 800; color: var(--maroon); }
+.lede-short{ display: none; }
+.hero-cta-stack{ display: flex; flex-direction: column; gap: var(--space-2); width: 100%; margin-top: var(--space-4); }
+.btn-guide{
+  position: relative;
+  align-self: center; width: min(100%, 22rem);
+  gap: 0.7rem;
+  padding: 1.1rem 1.5rem;
+  font-size: 1rem; font-weight: 800;
+  color: var(--maroon-dark);
+  background: var(--gold-soft);
+  border-color: transparent;
+  box-shadow: 0 14px 26px -16px rgba(124,90,26,0.7);
+}
+.btn-guide::before{
+  content: ""; position: absolute; inset: 5px;
+  border: 1.5px dashed rgba(72,11,21,0.42);
+  border-radius: 5px;
+  pointer-events: none;
+}
+.btn-guide:hover{ background: #EDDAAA; transform: translateY(-2px); box-shadow: 0 18px 30px -16px rgba(124,90,26,0.8); }
+.btn-guide .guide-ico{ width: 20px; height: 20px; flex: none; }
+.btn-guide .arrow{ display: inline-block; transition: transform 0.2s var(--ease-out); }
+.btn-guide:hover .arrow{ transform: translateX(4px); }
+.hero-ctas{
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+  width: 100%;
+}
+.btn-lg{ padding: 1.2rem 1.25rem; font-size: 1rem; white-space: normal; text-align: center; }
+.hero-photo-mobile{ display: none; }
+
+.orbit-stage{
+  grid-area: stage;
+  position: relative;
+  align-self: start;
+  height: clamp(440px, calc(100dvh - 134px), 700px);
+  touch-action: pan-y;
+  isolation: auto;
+}
+.orbit-stage::before{
+  content:"";
+  position:absolute; inset: 0;
+  background: radial-gradient(ellipse 36% 38% at var(--cx, 50%) var(--cy, 47%), rgba(255,255,255,0.85) 0%, rgba(255,255,255,0) 100%);
+  pointer-events:none;
+}
+.orbit-lines{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  overflow: visible;
+  pointer-events:none;
+  z-index: 0;
+}
+.orbit-lines .rail{ fill:none; stroke: var(--line-strong); stroke-width: 1; stroke-dasharray: 2 7; stroke-linecap: round; opacity: 0.8; }
+.orbit-lines .link{ fill:none; stroke: var(--gold); stroke-width: 1.1; stroke-linecap: round; transition: stroke 0.3s ease, stroke-width 0.3s ease; }
+.orbit-lines .node{ fill: var(--gold); transition: fill 0.3s ease; }
+.orbit-lines .link.is-hot{ stroke: var(--maroon); stroke-width: 1.6; }
+.orbit-lines .node.is-hot{ fill: var(--maroon); }
+
+.orbit-item{
+  position:absolute; left:0; top:0;
+  width:0; height:0;
+  padding:0; margin:0; border:0;
+  background:none; font:inherit; color:inherit;
+  mix-blend-mode: multiply;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.orbit-item.is-featured{ cursor: default; }
+.oi-body{
+  position:absolute; left:0; top:0;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+}
+.oi-img{
+  display:block;
+  width:100%; height:100%;
+  object-fit: contain;
+  user-select:none;
+  -webkit-user-drag: none;
+  pointer-events: none;
+  transition: transform 0.5s var(--ease-out);
+}
+.orbit-item:not(.is-featured):hover .oi-img{ transform: translateY(-6px) scale(1.035); }
+.orbit-item:focus-visible{ outline: none; }
+.orbit-item:focus-visible .oi-body{ outline: 2px solid var(--maroon); outline-offset: 4px; border-radius: 10px; }
+.oi-label{
+  position:absolute; left:0; top:0;
+  white-space: nowrap;
+  font-size: 0.82rem; font-weight: 700;
+  color: var(--ink-soft);
+  transition: color 0.25s ease;
+  pointer-events: none;
+}
+.orbit-item:hover .oi-label, .orbit-item:focus-visible .oi-label{ color: var(--maroon); }
+
+.orbit-item.is-featured{ cursor: pointer; }
+.orbit-item.is-featured .oi-label{
+  color: var(--ink); font-size: 0.95rem;
+  padding: 2px 10px; border-radius: 6px;
+  background: rgba(248,244,236,0.92);
+}
+.orbit-item.is-featured .oi-label::after{ content: "  Enquire \2192"; color: var(--maroon); }
+.orbit-now, .stamp.stamp--mobile{ display: none; }
+.sr-only{ position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+.stamp{
+  width: 96px; height: 96px;
+  padding: 12px;
+  border-radius: 50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position: absolute;
+  left: 0; bottom: 2%;
+  z-index: 20;
+  pointer-events: none;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+}
+.stamp-ring{
+  position:absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px dashed var(--gold);
+}
+.stamp::after{
+  content:"";
+  position:absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--maroon);
+}
+.stamp span:not(.stamp-ring){
+  font-family: var(--font-display);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--maroon);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+@media (min-width: 901px){
+  .hero::before{
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: url("/images/office-bg.webp") right clamp(-24px, -1.9vw, -12px) center / auto 100% no-repeat;
+    opacity: 0.47; mix-blend-mode: multiply; pointer-events: none;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, transparent 40%, #000 70%), linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent 0, transparent 40%, #000 70%), linear-gradient(to bottom, transparent 0, #000 14%, #000 86%, transparent 100%);
+    mask-composite: intersect;
+  }
+}
+
+@media (max-width: 900px){
+  .hero{ padding-top: var(--space-2); padding-bottom: var(--space-3); }
+  .hero-photo-mobile{
+    display: none; grid-area: photo;
+    height: 110px;
+    margin: 0 calc(var(--space-4) * -1);
+    background: url("/images/office-bg.webp") right top / auto 460px no-repeat;
+    background-position: right 0 top -78px;
+    opacity: 0.62; mix-blend-mode: multiply;
+  }
+  .hero-left, .hero-copy{ display: contents; }
+  .hero-head{ grid-area: brand; }
+  .hero-eyebrow{
+    white-space: nowrap; margin: 0 0 0.35rem;
+    font-size: clamp(0.56rem, 2.7vw, 0.72rem); letter-spacing: 0.03em;
+    justify-content: center;
+  }
+  .hero-title{ font-size: clamp(1.5rem, 7.4vw, 1.9rem); line-height: 1.1; text-align: center; }
+  .lede-full{ display: none; }
+  .lede-short{ display: inline; }
+  .hero-lede{
+    grid-area: lede; margin: 0; max-width: none;
+    font-size: 0.85rem; line-height: 1.45;
+  }
+  .hero-cta-stack{ grid-area: ctas; margin-top: 0; gap: 0.55rem; }
+  .btn-guide{ padding: 0.65rem 1rem; font-size: 0.82rem; gap: 0.5rem; }
+  .btn-guide .guide-ico{ width: 16px; height: 16px; }
+  .btn-lg{ padding: 0.8rem 0.4rem; font-size: 0.86rem; }
+  .hero-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas: "brand" "lede" "stage" "now" "ctas";
+    row-gap: 0.85rem;
+    align-items: start;
+  }
+  .orbit-stage{
+    align-self: stretch;
+    height: clamp(190px, 32dvh, 320px);
+    margin: 0 calc(var(--space-4) * -1);
+    overflow: clip;
+  }
+  .oi-label{ display: none; }
+  .orbit-item.is-featured .oi-label{ display: block; }
+  .orbit-stage .stamp{ width: 58px; height: 58px; padding: 7px; bottom: 4%; }
+  .orbit-stage .stamp span:not(.stamp-ring){ font-size: 0.44rem; letter-spacing: 0.06em; }
+  .orbit-now{ display: block; grid-area: now; text-align: center; }
+  .on-line{ margin: 0; display: flex; justify-content: center; align-items: baseline; gap: 0.5rem; }
+  .on-line b{ font-size: 0.76rem; font-weight: 700; color: var(--maroon); font-variant-numeric: tabular-nums; }
+  .on-line span{ font-family: var(--font-display); font-size: 1.02rem; font-weight: 600; color: var(--ink); }
+}
+@media (max-width: 400px){
+  .orbit-stage{ margin: 0 calc(var(--space-3) * -1); }
+  .hero-photo-mobile{ margin: 0 calc(var(--space-3) * -1); }
+}
+@media (max-width: 900px) and (max-height: 680px){
+  .hero{ padding-top: var(--space-1); padding-bottom: var(--space-2); }
+  .hero-grid{ row-gap: 0.4rem; }
+  .hero-photo-mobile{ height: 86px; background-size: auto 360px; background-position: right 0 top -61px; }
+  .hero-lede{ font-size: 0.78rem; line-height: 1.4; }
+  .hero-cta-stack{ gap: 0.35rem; }
+  .btn-guide{ padding: 0.5rem 0.9rem; }
+  .btn-lg{ padding: 0.55rem 0.4rem; font-size: 0.8rem; }
+  .orbit-stage{ height: clamp(110px, 22dvh, 320px); }
+}
+
+/* ============================================================
+   PRODUCTS REEL (home page only) — one highlight per category, pinned horizontal scroll.
+   ============================================================ */
+.products-reel{ position: relative; }
+.reel-pin{
+  position: sticky; top: 90px;
+  padding-block: var(--space-4) var(--space-4);
+  overflow: clip;
+}
+.reel-head{
+  display:flex; align-items:flex-end; justify-content:space-between; gap: var(--space-4);
+  margin-bottom: var(--space-3);
+  padding-inline: max(var(--space-4), calc((100vw - var(--max-w)) / 2 + var(--space-4)));
+}
+.reel-head .eyebrow::before{ display: none; }
+.reel-head h2{ font-size: clamp(1.7rem, 2.6vw, 2.2rem); margin-top: 6px; }
+.reel-head p{ margin-top: 8px; font-family: var(--font-accent); font-style: italic; font-weight: 700; font-size: 1.3rem; line-height: 1.25; color: var(--gold-deep); max-width: 56ch; }
+.reel-actions{ display:flex; flex-wrap:wrap; justify-content:flex-end; gap: 12px; flex-shrink: 0; }
+.reel-actions .btn{ padding: 0.7rem 1.4rem; will-change: transform; }
+.call-ico{ width: 16px; height: 16px; flex: none; }
+.reel-track{
+  display:flex; gap: 28px; width: max-content;
+  padding-inline: max(var(--space-4), calc((100vw - var(--max-w)) / 2 + var(--space-4)));
+  will-change: transform;
+}
+.reel-card{
+  flex: 0 0 auto; width: clamp(270px, 26vw, 360px);
+  display:flex; flex-direction:column; color: inherit;
+}
+.reel-card:focus-visible{ outline: 2px solid var(--maroon); outline-offset: 6px; border-radius: 6px; }
+.reel-photo{
+  --tile: var(--maroon-tint);
+  background: radial-gradient(120% 90% at 50% 105%, rgba(255,255,255,0.6), rgba(255,255,255,0) 62%), var(--tile);
+  border-radius: var(--radius-md); padding: 8px;
+  height: clamp(150px, calc(100svh - 455px), 380px);
+  display:flex; align-items:center; justify-content:center;
+}
+.reel-card:nth-child(even) .reel-photo{ --tile: var(--gold-tint); }
+.reel-card--wide .reel-photo img{ max-width: 112%; }
+.reel-photo img{
+  max-width:100%; max-height:100%; width:auto; height:auto; display:block;
+  transition: transform 0.45s var(--ease-out);
+}
+.reel-card:hover .reel-photo img{ transform: translateY(-5px); }
+.reel-card h3{ font-size: 1.3rem; margin: 10px 0 4px; }
+.reel-card h3 .arrow{ display:inline-block; color: var(--maroon); transition: transform 0.2s var(--ease-out); }
+.reel-card:hover h3 .arrow{ transform: translateX(4px); }
+.reel-card p{ font-family: var(--font-accent); font-style: italic; font-weight: 600; font-size: 1.2rem; line-height: 1.3; color: var(--maroon); }
+.reel-card--service .reel-photo{ position:relative; border-radius: var(--radius-md); overflow:hidden; align-items:stretch; padding: 0; background: var(--maroon-dark); }
+.reel-card--service .reel-photo img{ width:100%; height:100%; max-width:none; max-height:none; object-fit:cover; }
+.reel-card--service .reel-photo::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background: linear-gradient(to top, rgba(72,11,21,0.5), rgba(72,11,21,0) 55%);
+}
+.reel-card--service:hover .reel-photo img{ transform: scale(1.04); }
+@media (prefers-reduced-motion: reduce){
+  .reel{ height: auto !important; }
+  .reel-pin{ position: static; padding-block: var(--space-4) var(--space-3); }
+  .reel-track{ width:auto; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom: var(--space-2); transform:none !important; }
+  .reel-card{ width: 74vw; max-width: 320px; scroll-snap-align: start; }
+}
+@media (max-width: 760px){
+  .reel-pin{ padding-block: var(--space-3) var(--space-4); }
+  .reel-head{ flex-direction: column; align-items: flex-start; gap: var(--space-2); padding-inline: var(--space-3); margin-bottom: var(--space-2); }
+  .reel-actions{ justify-content:flex-start; }
+  .reel-head h2{ font-size: 1.5rem; }
+  .reel-head p{ font-size: 1.15rem; }
+  .reel-track{ padding-inline: var(--space-3); gap: 20px; }
+  .reel-card{ width: 64vw; max-width: 290px; }
+  .reel-card h3{ font-size: 1.2rem; }
+  .reel-photo{ height: clamp(130px, calc(100svh - 590px), 240px); }
+}
+
+/* ============================================================
+   SERVICES — home page only
+   ============================================================ */
+.services-grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+.service-card{ display:flex; flex-direction:row; align-items:flex-start; gap: var(--space-4); }
+.service-card .media-frame{
+  flex: 0 0 192px; width: 192px; height: 192px;
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 30px -14px rgba(0,0,0,0.55);
+}
+.service-card:hover .media-frame img{ transform: scale(1.05); }
+.service-body{ flex: 1 1 auto; min-width: 0; max-width: 40ch; }
+.service-label{ display:flex; align-items:center; gap: 0.5rem; }
+.service-label svg{ width: 16px; height: 16px; color: var(--gold-soft); flex: none; }
+.service-num{
+  font-family: var(--font-display);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  font-weight: 600;
+}
+.service-card h3{
+  font-size: 1.15rem;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+.service-card p{ font-size: 0.88rem; line-height: 1.5; }
+.svc-desc-short{ display: none; }
+
+.services-cta{ position: relative; text-align:center; margin-top: var(--space-5); perspective: 900px; }
+.services-call{
+  position: relative; isolation: isolate; overflow: hidden;
+  padding: 1.05rem 2.1rem; font-size: 1.02rem;
+  opacity: 0; transform: scale(0.7);
+}
+.services-call{ --pulse-spread: 0px; --pulse-alpha: 0; box-shadow: 0 0 0 var(--pulse-spread) rgba(251,243,236,var(--pulse-alpha)); }
+.services-call-glow{
+  position: absolute; z-index: -1; border-radius: 100px;
+  --glow-angle: 0deg;
+  background: conic-gradient(from var(--glow-angle), transparent 0deg, rgba(230,196,120,0.95) 55deg, transparent 130deg, transparent 360deg);
+  filter: blur(9px);
+  opacity: 0;
+  pointer-events: none;
+}
+.services-call::after{
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 40%;
+  background: linear-gradient(115deg, transparent, rgba(255,255,255,0.35), transparent);
+  transform: translateX(-160%) skewX(-18deg);
+  transition: transform 0.65s ease;
+  pointer-events: none;
+}
+.services-call:hover::after, .services-call:focus-visible::after{ transform: translateX(290%) skewX(-18deg); }
+.services-call .call-ico{ position: relative; z-index: 1; }
+.services-call span{ position: relative; z-index: 1; }
+.services-ripple{
+  position: absolute; z-index: 0; border-radius: 50%;
+  background: rgba(251,243,236,0.5); pointer-events: none;
+  width: 12px; height: 12px; margin: -6px 0 0 -6px;
+}
+@media (prefers-reduced-motion: reduce){
+  .services-call{ opacity: 1; transform: none; }
+}
+
+#services.section{ padding-top: var(--space-6); padding-bottom: var(--space-6); }
+#services .section-head{ margin-bottom: var(--space-5); }
+
+@media (max-width: 900px){
+  .services-grid{ grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+  .service-card{ flex-direction: column; gap: var(--space-2); }
+  .service-card .media-frame{ width: 100%; height: auto; aspect-ratio: 4/3; flex-basis: auto; }
+  .svc-desc-full{ display: none; }
+  .svc-desc-short{ display: block; }
+  .services-cta{ display: flex; justify-content: center; }
+}
+@media (max-width: 620px){
+  .services-grid{ grid-template-columns: 1fr; gap: var(--space-4); }
+  .service-card{ flex-direction: row; gap: var(--space-3); }
+  .service-card .media-frame{ width: 172px; height: 172px; aspect-ratio: 1/1; flex-basis: 172px; }
+  .service-body{ max-width: none; }
+  #services.section{ padding-top: var(--space-5); padding-bottom: var(--space-5); }
+  .services-cta{ margin-top: var(--space-4); }
+}
+
+/* ============================================================
+   WHY / ABOUT — home page only
+   ============================================================ */
+.why-grid{
+  display:grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-6);
+}
+.why-image{
+  margin-top: var(--space-5);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 5/4;
+}
+.why-image img{ width:100%; height:100%; object-fit: cover; }
+.why-list{ list-style:none; margin:0; padding:0; counter-reset: why; }
+.why-list li{
+  display:grid;
+  grid-template-columns: 44px 1fr;
+  gap: var(--space-3);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--ink);
+  counter-increment: why;
+}
+.why-list li > span:last-child{
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--maroon);
+}
+.why-list li:first-child{ padding-top:0; }
+.why-list li .n::before{
+  content: counter(why, decimal-leading-zero);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.why-copy h2{ font-size: clamp(2rem,3.2vw,2.6rem); }
+.why-copy p{
+  margin-top: var(--space-3); max-width: 44ch;
+  font-family: var(--font-accent); font-style: italic; font-weight: 600;
+  font-size: 1.32rem; line-height: 1.4; color: var(--maroon);
+}
+.brand-highlight{
+  font-style: normal;
+  font-weight: 700;
+  color: var(--maroon-dark);
+  background: linear-gradient(to bottom, transparent 66%, var(--gold-soft) 66%);
+  padding: 0 0.12em;
+}
+.why-h2-short, .why-desc-short{ display: none; }
+@media (max-width: 900px){
+  .why-h2-full{ display: none; }
+  .why-h2-short{ display: inline; }
+  .why-desc-full{ display: none; }
+  .why-desc-short{ display: block; }
+}
+
+#about.section{ padding-top: var(--space-6); padding-bottom: var(--space-6); }
+
+@media (min-width: 901px){
+  .why-list{ position: sticky; top: 106px; align-self: start; }
+}
+
+@media (max-width: 900px){ .why-grid{ grid-template-columns: 1fr; gap: var(--space-4); } }
+
+/* ============================================================
+   USE CASES — home page only
+   ============================================================ */
+.usecase-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+.usecase-card{
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.25s var(--ease-out), box-shadow 0.25s var(--ease-out);
+}
+.usecase-card:hover{ transform: translateY(-5px); box-shadow: var(--shadow-card-hover); }
+.usecase-card:hover .media-frame img{ transform: scale(1.07); }
+.usecase-card .media-frame{ aspect-ratio: 3/2; }
+.usecase-body{ padding: var(--space-3) var(--space-3) var(--space-4); }
+.usecase-card h3{ font-size: 1.22rem; margin-bottom: var(--space-1); }
+.usecase-card p{
+  font-family: var(--font-accent); font-style: italic; font-weight: 600;
+  font-size: 1.14rem; line-height: 1.32; color: var(--maroon);
+}
+.usecase-cta-panel{
+  display:flex; align-items:center; justify-content:center;
+  background: var(--maroon-dark);
+}
+.usecase-cta-panel svg{ width: 56px; height: 56px; color: var(--gold-soft); transition: transform 0.25s var(--ease-out); }
+.usecase-cta:hover .usecase-cta-panel svg{ transform: scale(1.1); }
+.usecase-cta .usecase-body{ display:flex; flex-direction:column; gap: var(--space-2); align-items:flex-start; }
+.usecase-cta .card-enquire{ margin-top: 2px; }
+
+#use-cases.section{ padding-top: var(--space-6); padding-bottom: var(--space-6); }
+#use-cases .section-head{ margin-bottom: var(--space-5); }
+@media (max-width: 620px){
+  #use-cases.section{ padding-top: var(--space-5); padding-bottom: var(--space-5); }
+}
+
+@media (max-width: 620px){
+  .usecase-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 400px){
+  .usecase-grid{ grid-template-columns: 1fr; }
+}
+</style>
