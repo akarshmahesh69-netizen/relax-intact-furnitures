@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Products | Relax Intact Furnitures",
   description:
     "The full Relax Intact range: executive, computer and visitor chairs, office tables, cupboards and vertical blinds. Manufactured and supplied directly in Bangalore.",
+  alternates: { canonical: "/products" },
   openGraph: {
     type: "website",
     title: "Products | Relax Intact Furnitures",
@@ -217,7 +218,7 @@ export default function ProductsPage() {
           </div>
 
           <div className="unsure-row">
-            <p>Need something built to size, or a chair repaired? <a className="unsure-link" href="/#contact">Tell us what you need →</a></p>
+            <p>Need something built to size, or a chair repaired? <a className="unsure-link" href="#contact">Tell us what you need →</a></p>
           </div>
 
         </div>

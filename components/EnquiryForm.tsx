@@ -101,6 +101,11 @@ export default function EnquiryForm() {
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    // Honeypot spam check: the hidden "website" field is invisible and out of the tab order, so a
+    // real person never fills it. Automated spam bots that blindly fill every field do. If it has a
+    // value, silently drop the submission — no error, no success, nothing a bot can learn from.
+    const hp = (e.currentTarget.elements.namedItem("website") as HTMLInputElement | null)?.value;
+    if (hp) return;
     setSuccess(false);
     let firstBadKey: FieldKey | null = null;
     const nextInvalid = { ...invalid };
@@ -126,6 +131,12 @@ export default function EnquiryForm() {
 
   return (
     <form className="enquiry" id="enquiryForm" noValidate onSubmit={handleSubmit}>
+      {/* Honeypot spam trap — hidden from people (off-screen, out of tab order, aria-hidden),
+          only bots fill it. See handleSubmit. */}
+      <div className="hp-field" aria-hidden="true">
+        <label htmlFor="website">Leave this field empty</label>
+        <input type="text" id="website" name="website" tabIndex={-1} autoComplete="off" />
+      </div>
       <div className="field-row">
         <div className={`field${invalid.fName ? " invalid" : ""}`}>
           <label htmlFor="fName">Name</label>

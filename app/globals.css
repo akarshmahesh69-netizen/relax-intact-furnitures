@@ -391,6 +391,19 @@ button{ font-family: inherit; cursor: pointer; }
 .section{ padding-top: var(--space-7); padding-bottom: var(--space-7); }
 .section-alt{ background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 
+/* Honeypot spam-trap field — visually removed but still in the DOM for bots to trip on.
+   Off-screen (not display:none, which some bots skip), never focusable, never announced. */
+.hp-field{ position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+/* Prose typography for the plain-content pages (privacy policy, terms). */
+.legal-page{ max-width: 760px; }
+.legal-page h2{ font-size: 1.3rem; margin-top: var(--space-5); margin-bottom: var(--space-2); color: var(--ink); }
+.legal-page p, .legal-page li{ font-size: 1rem; line-height: 1.7; margin-bottom: var(--space-2); }
+.legal-page ul{ padding-left: 1.4rem; margin-bottom: var(--space-3); }
+.legal-page a{ color: var(--maroon); text-decoration: underline; }
+.legal-page a:hover{ color: var(--maroon-dark); }
+.legal-updated{ color: var(--muted); font-size: 0.9rem; margin-bottom: var(--space-4); }
+
 /* ============================================================
    MEDIA CARD BASE (shared by service / usecase / products-page shelf)
    ============================================================ */
@@ -548,6 +561,9 @@ footer a{ color: #E8E2D5; }
   flex-wrap: wrap;
   gap: var(--space-2);
 }
+.footer-legal{ display: inline-flex; gap: var(--space-3); }
+.footer-legal a{ color: inherit; }
+.footer-legal a:hover{ color: #fff; text-decoration: underline; }
 
 @media (max-width: 900px){ .footer-grid{ grid-template-columns: 1fr 1fr; } .footer-brand{ grid-column: span 2; } }
 @media (max-width: 560px){ .footer-grid{ grid-template-columns: 1fr; } .footer-brand{ grid-column: auto; } }

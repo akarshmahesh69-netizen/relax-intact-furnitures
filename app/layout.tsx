@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 import "./home.css";
 import "./products.css";
@@ -14,9 +15,13 @@ import EnquireDelegate from "@/components/EnquireDelegate";
 // everywhere costs nothing and avoids juggling per-route CSS imports. See this project's CLAUDE.md.
 
 export const metadata: Metadata = {
+  // metadataBase makes relative OG/canonical URLs resolve to absolute ones. Reads from the
+  // single SITE_URL constant in lib/site.ts — update that one place when the real domain is set.
+  metadataBase: new URL(SITE_URL),
   title: "Relax Intact Furnitures | Office Furniture & Workplace Maintenance, Bangalore",
   description:
     "Relax Intact manufactures and supplies office chairs, tables, cupboards and blinds, and services them with repair, servicing and cleaning. Bangalore.",
+  alternates: { canonical: "/" },
   icons: {
     icon: "/images/favicon.png",
     apple: "/images/favicon.png",

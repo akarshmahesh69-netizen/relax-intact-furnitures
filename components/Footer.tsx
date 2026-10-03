@@ -48,6 +48,10 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 Relax Intact Furnitures.</span>
+          <span className="footer-legal">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
+          </span>
           <span>Made in India</span>
         </div>
       </div>
