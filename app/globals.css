@@ -1,10 +1,9 @@
 /* ============================================================
    TOKENS
-   (shared by every page — identical values lived in both
-   index.html and products.html's inline <style> before this
-   migration; --font-accent was only declared in index.html's
-   copy but is harmless to declare globally since it's simply
-   unused where no selector references it)
+   Ported verbatim from the Astro source's src/styles/global.css — shared by every
+   page: tokens (:root) + base element resets + header/nav/footer/button/eyebrow/
+   section/media-frame/card-enquire/contact-form/colour-band CSS. Framework-agnostic,
+   so no changes were needed for the Next.js port beyond the file move itself.
    ============================================================ */
 :root{
   --bg: #F8F4EC;
@@ -605,3 +604,8 @@ footer a{ color: #E8E2D5; }
    as a chip */
 .band-maroon .eyebrow-highlight{ color: var(--gold-deep); }
 .band-gold .eyebrow-highlight{ color: #FBF3EC; background: var(--maroon); }
+
+/* html.js gate, applied client-side (see components/JsClassGate.tsx) — mirrors the inline
+   `document.documentElement.classList.add('js')` script the Astro source ran before paint via
+   `is:inline`. On a true no-JS browser the gate is never applied and `.reveal` elements (scoped
+   under `.js .reveal`) simply stay visible with no fade-in, matching the source's no-JS fallback. */

@@ -1,43 +1,20 @@
-# Astro Starter Kit: Minimal
+# Relax Intact Furnitures — Next.js
 
-```sh
-npm create astro@latest -- --template minimal
+Marketing site for Relax Intact Furnitures (office furniture manufacturing/supply + repair/
+servicing/cleaning, Bangalore). This is the Next.js rewrite of the Astro project at
+`../relax-intact-astro/`.
+
+See **[CLAUDE.md](./CLAUDE.md)** for the full architecture writeup, including the hero-orbit
+image-transparency fix this rewrite was built for.
+
+## Getting started
+
+```bash
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run build    # production build
+npm run start    # serve the production build
 ```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

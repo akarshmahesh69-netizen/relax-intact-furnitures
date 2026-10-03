@@ -1,0 +1,82 @@
+/* ============================================================
+   PRODUCTS PAGE — full catalogue, grouped by category on a "shelf":
+   a dashed rail under every photo, echoing the home-page hero orbit's own gold rail/link lines,
+   so this page reads as a continuation of that world rather than a different component library.
+   Ported verbatim from the Astro source's products.astro scoped <style>. Not part of the orbit
+   image fix — these shelf photos keep the mix-blend-mode trick for the two non-cutout photos
+   (computer/visitor chairs), exactly as in the source, since the brief scoped the real-transparency
+   fix to the hero orbit only.
+   ============================================================ */
+.products-page-intro{ padding-top: var(--space-5); padding-bottom: 0; }
+.products-page-intro .eyebrow::before{ display: none; }
+.products-page-intro .section-head{ margin-bottom: var(--space-3); }
+#products.section{ padding-top: var(--space-3); padding-bottom: var(--space-5); }
+.category{ padding: var(--space-4) 0; border-bottom: 1px solid var(--line); }
+.category:last-of-type{ border-bottom: none; }
+.cat-head{ margin-bottom: var(--space-3); }
+.cat-head h2{
+  font-size: 0.95rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--maroon-dark);
+}
+.shelf{
+  display:flex; flex-wrap:wrap; gap: 32px 40px;
+  align-items:flex-end; position:relative;
+}
+.shelf-item{
+  flex: 1 1 190px; max-width: 240px;
+  display:flex; flex-direction:column; align-items:center; text-align:center;
+}
+.js .shelf-item.reveal{
+  opacity:0; transform: scale(0.93) rotate(-1.3deg);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 90ms);
+}
+.js .shelf-item.reveal.in{ opacity:1; transform:none; }
+.shelf-photo{
+  --tile: var(--maroon-tint);
+  background: radial-gradient(120% 90% at 50% 105%, rgba(255,255,255,0.6), rgba(255,255,255,0) 62%), var(--tile);
+  border-radius: var(--radius-md); padding: 14px;
+  width:100%; height: clamp(160px, 17vw, 220px);
+  display:flex; align-items:center; justify-content:center; margin-bottom: 14px;
+  box-shadow: 0 0 0 0 rgba(110,18,32,0);
+  transition: box-shadow 0.45s var(--ease-out);
+}
+.category:nth-child(even) .shelf-photo{ --tile: var(--gold-tint); }
+.shelf-photo img{
+  max-width:100%; max-height:100%; width:auto; height:auto; display:block;
+  mix-blend-mode: multiply; transition: transform 0.45s var(--ease-out);
+}
+/* Per-item override for photos that aren't clean white/studio cutouts (see
+   products catalogue expansion notes in the source project's CLAUDE.md): disable the multiply
+   blend, which otherwise turns a busy/dark background into a muddy overlay, and instead frame the
+   photo as a normal rounded cutout that fills the tile. */
+.shelf-photo.no-blend img{
+  mix-blend-mode: normal;
+  width:100%; height:100%; max-width:100%; max-height:100%;
+  object-fit: cover; border-radius: calc(var(--radius-md) - 6px);
+}
+.shelf-item:hover .shelf-photo img{ transform: translateY(-5px); }
+.shelf-item:hover .shelf-photo{ box-shadow: 0 18px 34px -18px rgba(110,18,32,0.4); }
+.shelf-item h3{ font-size: 1.4rem; margin-bottom: 6px; }
+.shelf-item > p{ font-size: 0.88rem; margin-bottom: 12px; max-width: 24ch; }
+.shelf-chips{ display:flex; flex-wrap:wrap; justify-content:center; gap: 6px; margin-bottom: 14px; }
+.shelf-chips span{
+  font-size: 0.72rem; font-weight: 600; color: var(--maroon-dark);
+  background: var(--maroon-tint); border-radius: 100px; padding: 4px 10px;
+}
+.shelf-item .card-enquire{ align-self: center; }
+
+.unsure-row{ text-align:center; padding-top: var(--space-3); }
+.unsure-row p{ font-size: 0.95rem; color: var(--ink-soft); }
+.unsure-link{
+  background:none; border:none; padding:0; font-family:inherit;
+  font-size: 0.95rem; font-weight:700; color: var(--maroon);
+  border-bottom: 1px solid var(--maroon); padding-bottom: 2px;
+}
+a.unsure-link{ text-decoration:none; }
+.unsure-link:hover{ color: var(--maroon-dark); border-color: var(--maroon-dark); }
+
+@media (max-width: 900px){
+  .category{ padding: var(--space-3) 0; }
+  .shelf{ gap: 28px 24px; justify-content: center; }
+}
