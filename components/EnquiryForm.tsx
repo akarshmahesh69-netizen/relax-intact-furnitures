@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useState } from "react";
+import { ENQUIRY_SHEET_URL } from "@/lib/site";
 
 /**
  * Ported from the Astro source's src/components/EnquiryForm.astro (byte-identical markup on both
@@ -57,6 +58,8 @@ export default function EnquiryForm() {
   });
   const [requirement, setRequirement] = useState("");
   const [success, setSuccess] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const checks = validators();
 
@@ -99,14 +102,16 @@ export default function EnquiryForm() {
     if (touched[key] || invalid[key]) validate(key, value);
   }
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // Honeypot spam check: the hidden "website" field is invisible and out of the tab order, so a
     // real person never fills it. Automated spam bots that blindly fill every field do. If it has a
     // value, silently drop the submission — no error, no success, nothing a bot can learn from.
-    const hp = (e.currentTarget.elements.namedItem("website") as HTMLInputElement | null)?.value;
+    const form = e.currentTarget;
+    const hp = (form.elements.namedItem("website") as HTMLInputElement | null)?.value;
     if (hp) return;
     setSuccess(false);
+    setSubmitError(false);
     let firstBadKey: FieldKey | null = null;
     const nextInvalid = { ...invalid };
     (Object.keys(checks) as FieldKey[]).forEach((key) => {
@@ -120,13 +125,41 @@ export default function EnquiryForm() {
       document.getElementById(firstBadKey)?.focus();
       return;
     }
-    setSuccess(true);
-    setValues({ fName: "", fPhone: "", fEmail: "" });
-    setRequirement("");
-    (e.target as HTMLFormElement).reset();
-    requestAnimationFrame(() => {
-      document.getElementById("formSuccess")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-    });
+
+    const company = (form.elements.namedItem("company") as HTMLInputElement | null)?.value ?? "";
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement | null)?.value ?? "";
+
+    setSubmitting(true);
+    try {
+      // The Apps Script Web App doesn't send CORS headers back, so the browser can't read the
+      // response — mode: "no-cors" lets the request still go through (Apps Script receives and
+      // processes it) while treating it as fire-and-forget on our end. We already validated the
+      // fields above, so we only need to know the request didn't throw (network/DNS failure).
+      await fetch(ENQUIRY_SHEET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
+        body: JSON.stringify({
+          name: values.fName,
+          company,
+          phone: values.fPhone,
+          email: values.fEmail,
+          requirement,
+          message,
+        }),
+      });
+      setSuccess(true);
+      setValues({ fName: "", fPhone: "", fEmail: "" });
+      setRequirement("");
+      form.reset();
+      requestAnimationFrame(() => {
+        document.getElementById("formSuccess")?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    } catch {
+      setSubmitError(true);
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -213,10 +246,15 @@ export default function EnquiryForm() {
         <label htmlFor="fMessage">Message <span className="opt">(optional)</span></label>
         <textarea id="fMessage" name="message" placeholder="Number of pieces, office location, timeline..." />
       </div>
-      <button type="submit" className="btn btn-primary" style={{ alignSelf: "flex-start" }}>
-        Send enquiry
+      <button type="submit" className="btn btn-primary" style={{ alignSelf: "flex-start" }} disabled={submitting}>
+        {submitting ? "Sending…" : "Send enquiry"}
       </button>
       <p className="form-note">We reply to enquiries directly. No account or checkout required.</p>
+      {submitError && (
+        <div className="form-success visible" id="formError" role="alert">
+          Something went wrong sending your enquiry. Please call or WhatsApp us instead.
+        </div>
+      )}
       <div className={`form-success${success ? " visible" : ""}`} id="formSuccess" role="status">
         Enquiry received. We&apos;ll get back to you shortly on the phone number provided.
       </div>
