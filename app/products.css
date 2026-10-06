@@ -7,7 +7,22 @@
    (computer/visitor chairs), exactly as in the source, since the brief scoped the real-transparency
    fix to the hero orbit only.
    ============================================================ */
-.products-page-intro{ padding-top: var(--space-5); padding-bottom: 0; }
+.products-page-intro{
+  position: relative; isolation: isolate; overflow: hidden;
+  padding-top: var(--space-5); padding-bottom: var(--space-4);
+}
+/* Faint catalogue-photo texture behind the heading/description, reusing the same hero image as
+   the home page for visual continuity. Kept subtle (low opacity + a fade into the page's own
+   cream background) so the heading text stays fully legible — a decorative accent, not a hero. */
+.products-page-intro::before{
+  content: ""; position: absolute; inset: 0; z-index: -2;
+  background: url("/images/office-bg.webp") center 30% / cover no-repeat;
+  opacity: 0.16;
+}
+.products-page-intro::after{
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(248,244,236,0.5) 0%, var(--bg) 80%);
+}
 .products-page-intro .eyebrow::before{ display: none; }
 .products-page-intro .section-head{ margin-bottom: var(--space-3); }
 #products.section{ padding-top: var(--space-3); padding-bottom: var(--space-5); }
