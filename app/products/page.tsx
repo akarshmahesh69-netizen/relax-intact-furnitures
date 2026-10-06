@@ -158,12 +158,10 @@ export default function ProductsPage() {
 
             <div className="contact-image">
               <img
-                src="https://images.pexels.com/photos/31236091/pexels-photo-31236091.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800"
-                srcSet="https://images.pexels.com/photos/31236091/pexels-photo-31236091.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/31236091/pexels-photo-31236091.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w"
-                sizes="(max-width: 900px) 92vw, 50vw"
-                width={800}
-                height={450}
-                alt="Warm, comfortable workspace with an ergonomic chair and desk"
+                src="/images/contact-office.webp"
+                width={1152}
+                height={769}
+                alt="Relax Intact office workspace with staff at ergonomic mesh-back chairs and desks"
                 loading="lazy"
                 decoding="async"
               />
