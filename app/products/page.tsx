@@ -58,27 +58,6 @@ export default function ProductsPage() {
                 <div className="shelf-chips"><span>Cantilever frame</span><span>Reception</span><span>Meeting rooms</span></div>
                 <button className="card-enquire" data-req="Visitor Chairs">Enquire →</button>
               </article>
-              <article className="shelf-item">
-                <div className="shelf-photo" style={{ ["--tile" as string]: "linear-gradient(160deg, var(--gold-tint), var(--maroon-tint))" }}><img src="https://images.pexels.com/photos/12269763/pexels-photo-12269763.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/12269763/pexels-photo-12269763.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/12269763/pexels-photo-12269763.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={800} alt="Pair of black mesh ergonomic task chairs with teal seat cushions and chrome bases" loading="lazy" decoding="async" /></div>
-                <h3>Ergonomic Task Chair</h3>
-                <p>Everyday desk seating with lumbar support and smooth-rolling castors.</p>
-                <div className="shelf-chips"><span>Lumbar support</span><span>Adjustable height</span><span>Nylon castors</span></div>
-                <button className="card-enquire" data-req="Office Chairs">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo no-blend" style={{ ["--tile" as string]: "var(--gold-tint)" }}><img src="https://images.pexels.com/photos/9300767/pexels-photo-9300767.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/9300767/pexels-photo-9300767.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/9300767/pexels-photo-9300767.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={1200} alt="Row of black high-back conference room chairs around boardroom tables" loading="lazy" decoding="async" /></div>
-                <h3>Conference Room Chairs</h3>
-                <p>Matching high-back seating for boardrooms and training rooms.</p>
-                <div className="shelf-chips"><span>High-back</span><span>Chrome frame</span><span>Matching sets</span></div>
-                <button className="card-enquire" data-req="Visitor Chairs">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo no-blend" style={{ ["--tile" as string]: "var(--maroon-tint)" }}><img src="https://images.pexels.com/photos/37468394/pexels-photo-37468394.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/37468394/pexels-photo-37468394.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/37468394/pexels-photo-37468394.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={571} alt="Teal high-back manager's office chair with a headrest and padded armrests" loading="lazy" decoding="async" /></div>
-                <h3>Manager&apos;s Chair</h3>
-                <p>Cushioned high-back seating with a headrest for cabins and managers&apos; desks.</p>
-                <div className="shelf-chips"><span>Headrest</span><span>Padded armrests</span><span>Tilt lock</span></div>
-                <button className="card-enquire" data-req="Executive Chairs">Enquire →</button>
-              </article>
             </div>
           </div>
 
@@ -105,27 +84,6 @@ export default function ProductsPage() {
                 <div className="shelf-chips"><span>Lockable</span><span>Glass-door shelves</span><span>Filing</span></div>
                 <button className="card-enquire" data-req="Cupboards">Enquire →</button>
               </article>
-              <article className="shelf-item">
-                <div className="shelf-photo no-blend" style={{ ["--tile" as string]: "var(--bg)" }}><img src="https://images.pexels.com/photos/12255816/pexels-photo-12255816.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/12255816/pexels-photo-12255816.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/12255816/pexels-photo-12255816.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={533} alt="Row of grey powder-coated steel storage lockers with individual lockable doors" loading="lazy" decoding="async" /></div>
-                <h3>Steel Storage Lockers</h3>
-                <p>Multi-compartment steel lockers for staff belongings and shared storage.</p>
-                <div className="shelf-chips"><span>Lockable doors</span><span>Multi-compartment</span><span>Powder-coated steel</span></div>
-                <button className="card-enquire" data-req="Cupboards">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo no-blend" style={{ ["--tile" as string]: "linear-gradient(160deg, var(--maroon-tint), var(--gold-tint))" }}><img src="https://images.pexels.com/photos/36126272/pexels-photo-36126272.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/36126272/pexels-photo-36126272.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/36126272/pexels-photo-36126272.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={533} alt="Tall modular slotted-angle storage racking with adjustable steel shelves in a warehouse aisle" loading="lazy" decoding="async" /></div>
-                <h3>Slotted Angle Rack</h3>
-                <p>Modular slotted-angle shelving that bolts together without welding, built to the space.</p>
-                <div className="shelf-chips"><span>Modular</span><span>Adjustable shelves</span><span>Bolted assembly</span></div>
-                <button className="card-enquire" data-req="Storage Racks">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo no-blend" style={{ ["--tile" as string]: "linear-gradient(160deg, var(--gold-tint), var(--maroon-tint))" }}><img src="https://images.pexels.com/photos/12706241/pexels-photo-12706241.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/12706241/pexels-photo-12706241.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/12706241/pexels-photo-12706241.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={533} alt="Heavy-duty red and black slotted-angle pallet racking in a warehouse aisle" loading="lazy" decoding="async" /></div>
-                <h3>Heavy-Duty Slotted Angle Rack</h3>
-                <p>Reinforced slotted-angle racking for bulk stock and heavier loads.</p>
-                <div className="shelf-chips"><span>Heavy-duty</span><span>Pallet storage</span><span>Powder-coated</span></div>
-                <button className="card-enquire" data-req="Storage Racks">Enquire →</button>
-              </article>
             </div>
           </div>
 
@@ -137,20 +95,6 @@ export default function ProductsPage() {
                 <h3>Sofas &amp; Lounge Seating</h3>
                 <p>Sofas, lounge chairs and multi-seater chairs.</p>
                 <div className="shelf-chips"><span>Sofas</span><span>Lounge chairs</span><span>Multi-seater chairs</span></div>
-                <button className="card-enquire" data-req="Sofas &amp; Lounge Seating">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo" style={{ ["--tile" as string]: "var(--gold-tint)" }}><img src="https://images.pexels.com/photos/10912069/pexels-photo-10912069.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/10912069/pexels-photo-10912069.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/10912069/pexels-photo-10912069.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={1200} alt="White upholstered two-seater lounge sofa on a studio background" loading="lazy" decoding="async" /></div>
-                <h3>Two-seater Lounge Sofa</h3>
-                <p>Compact upholstered sofa for reception areas and breakout corners.</p>
-                <div className="shelf-chips"><span>Two-seater</span><span>Upholstered</span><span>Wooden feet</span></div>
-                <button className="card-enquire" data-req="Sofas &amp; Lounge Seating">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo" style={{ ["--tile" as string]: "var(--maroon-tint)" }}><img src="https://images.pexels.com/photos/4172381/pexels-photo-4172381.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/4172381/pexels-photo-4172381.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/4172381/pexels-photo-4172381.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={533} alt="Brown L-shaped sectional sofa with striped cushions" loading="lazy" decoding="async" /></div>
-                <h3>L-shaped Sectional Sofa</h3>
-                <p>Corner sectional seating for larger lounges and waiting areas.</p>
-                <div className="shelf-chips"><span>L-shaped</span><span>Sectional</span><span>Striped cushions</span></div>
                 <button className="card-enquire" data-req="Sofas &amp; Lounge Seating">Enquire →</button>
               </article>
             </div>
@@ -166,20 +110,6 @@ export default function ProductsPage() {
                 <div className="shelf-chips"><span>Café chairs</span><span>Bar stools</span></div>
                 <button className="card-enquire" data-req="Café &amp; Bar Seating">Enquire →</button>
               </article>
-              <article className="shelf-item">
-                <div className="shelf-photo" style={{ ["--tile" as string]: "var(--gold-tint)" }}><img src="https://images.pexels.com/photos/10936095/pexels-photo-10936095.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/10936095/pexels-photo-10936095.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/10936095/pexels-photo-10936095.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={1000} alt="Black perforated plastic bar stool on a white studio background" loading="lazy" decoding="async" /></div>
-                <h3>Perforated Bar Stool</h3>
-                <p>Lightweight stackable stool for cafés and breakout counters.</p>
-                <div className="shelf-chips"><span>Stackable</span><span>Perforated seat</span><span>Powder-coated legs</span></div>
-                <button className="card-enquire" data-req="Café &amp; Bar Seating">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo" style={{ ["--tile" as string]: "var(--maroon-tint)" }}><img src="https://images.pexels.com/photos/19663734/pexels-photo-19663734.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/19663734/pexels-photo-19663734.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/19663734/pexels-photo-19663734.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={1199} alt="Black adjustable swivel bar stool with a round wooden seat" loading="lazy" decoding="async" /></div>
-                <h3>Adjustable Swivel Stool</h3>
-                <p>Height-adjustable stool with a swivel wooden seat for café counters.</p>
-                <div className="shelf-chips"><span>Height-adjustable</span><span>Swivel seat</span><span>Metal frame</span></div>
-                <button className="card-enquire" data-req="Café &amp; Bar Seating">Enquire →</button>
-              </article>
             </div>
           </div>
 
@@ -191,27 +121,6 @@ export default function ProductsPage() {
                 <h3>Vertical Blinds</h3>
                 <p>Window blinds fitted for cabins, meeting rooms and open-plan offices.</p>
                 <div className="shelf-chips"><span>Fabric vanes</span><span>Cabins</span><span>Meeting rooms</span><span>Supply &amp; installation</span></div>
-                <button className="card-enquire" data-req="Vertical Blinds">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo" style={{ ["--tile" as string]: "var(--bg)" }}><img src="https://images.pexels.com/photos/4220436/pexels-photo-4220436.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/4220436/pexels-photo-4220436.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/4220436/pexels-photo-4220436.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={600} alt="Cream textile vertical window blinds with sunlight filtering through" loading="lazy" decoding="async" /></div>
-                <h3>Cream Vertical Blinds</h3>
-                <p>Soft cream fabric vanes that diffuse daylight without blocking the view.</p>
-                <div className="shelf-chips"><span>Textile vanes</span><span>Light-diffusing</span><span>Cabins</span></div>
-                <button className="card-enquire" data-req="Vertical Blinds">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo" style={{ ["--tile" as string]: "var(--gold-tint)" }}><img src="https://images.pexels.com/photos/33996299/pexels-photo-33996299.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/33996299/pexels-photo-33996299.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/33996299/pexels-photo-33996299.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={1067} alt="Close-up of grey woven vertical window blinds" loading="lazy" decoding="async" /></div>
-                <h3>Grey Woven Vertical Blinds</h3>
-                <p>Woven grey vanes with a subtle texture for a neutral, modern look.</p>
-                <div className="shelf-chips"><span>Woven texture</span><span>Neutral grey</span><span>Meeting rooms</span></div>
-                <button className="card-enquire" data-req="Vertical Blinds">Enquire →</button>
-              </article>
-              <article className="shelf-item">
-                <div className="shelf-photo no-blend" style={{ ["--tile" as string]: "linear-gradient(160deg, var(--maroon-tint), var(--gold-tint))" }}><img src="https://images.pexels.com/photos/18306897/pexels-photo-18306897.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800" srcSet="https://images.pexels.com/photos/18306897/pexels-photo-18306897.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=400 400w, https://images.pexels.com/photos/18306897/pexels-photo-18306897.jpeg?auto=compress&cs=tinysrgb&fm=webp&w=800 800w" width={800} height={533} alt="Amber-toned vertical blinds fitted in a boardroom with a flipchart stand" loading="lazy" decoding="async" /></div>
-                <h3>Amber Vertical Blinds</h3>
-                <p>Warm amber vanes fitted in a boardroom, shown here with natural light through the window.</p>
-                <div className="shelf-chips"><span>Warm tone</span><span>Supply &amp; installation</span><span>Boardrooms</span></div>
                 <button className="card-enquire" data-req="Vertical Blinds">Enquire →</button>
               </article>
             </div>
