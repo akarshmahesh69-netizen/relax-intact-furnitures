@@ -25,7 +25,8 @@ export default function ProductsReel() {
     if (!reel || !pin || !track) return;
 
     try {
-      const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+      // Forced to never match — see HeroOrbit.tsx's comment on this same pattern.
+      const mq = window.matchMedia("not all");
       const header = document.querySelector<HTMLElement>(".site-header");
       let maxX = 0,
         stickTop = 90,

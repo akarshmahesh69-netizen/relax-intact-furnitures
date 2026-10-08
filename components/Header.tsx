@@ -65,7 +65,8 @@ export default function Header() {
     const chair = chairRef.current;
     const fill = fillRef.current;
     if (!header || !chair || !fill) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    // Forced to never match — see HeroOrbit.tsx's comment on this same pattern.
+    const reduce = window.matchMedia("not all");
 
     let chairW = 26;
     let maxX = 0;

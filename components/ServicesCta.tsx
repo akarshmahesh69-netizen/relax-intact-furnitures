@@ -23,11 +23,6 @@ export default function ServicesCta() {
     const cta = ctaRef.current;
     const ring = ringRef.current;
     if (!cta || !ring) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!g || reduce) {
-      if (cta) g.set(cta, { opacity: 1, scale: 1 });
-      return;
-    }
 
     const ico = cta.querySelector<HTMLElement>(".call-ico");
 

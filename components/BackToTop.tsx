@@ -20,7 +20,8 @@ export default function BackToTop() {
   useEffect(() => {
     const toTop = btnRef.current;
     if (!toTop) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    // Forced to never match — see HeroOrbit.tsx's comment on this same pattern.
+    const reduce = window.matchMedia("not all");
     gsap.set(toTop, { autoAlpha: 0, y: 16, scale: 0.8 });
     let shown = false;
 
@@ -49,8 +50,7 @@ export default function BackToTop() {
   }, []);
 
   function handleClick() {
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     document.getElementById("heroTitle")?.focus({ preventScroll: true });
   }
 

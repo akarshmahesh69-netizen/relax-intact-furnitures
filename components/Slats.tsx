@@ -16,7 +16,7 @@ export default function Slats() {
     const wrap = wrapRef.current;
     if (!wrap) return;
     const g = gsap;
-    if (!g || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!g) return;
 
     const bars = Array.from(wrap.querySelectorAll<HTMLElement>("span"));
     if (!bars.length) return;

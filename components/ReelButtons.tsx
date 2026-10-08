@@ -20,7 +20,7 @@ import gsap from "gsap";
 export default function ReelButtons() {
   useEffect(() => {
     const g = gsap;
-    if (!g || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!g) return;
 
     const cleanups: Array<() => void> = [];
 

@@ -126,7 +126,10 @@ export default function HeroOrbit() {
       const railG = svg.querySelector<SVGGElement>(".rails")!;
       const linkG = svg.querySelector<SVGGElement>(".links")!;
       const live = orbitLiveRef.current;
-      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+      // Forced to never match: this site plays its animations regardless of the visitor's OS
+      // "reduce motion" setting (client's explicit choice, overriding the usual accessibility
+      // default). "not all" is a media query that's always false in every browser.
+      const reduce = window.matchMedia("not all");
       const mqMobile = window.matchMedia("(max-width: 900px)");
       let mode: "orbit" | "swipe" = mqMobile.matches ? "swipe" : "orbit";
 

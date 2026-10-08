@@ -328,12 +328,6 @@
   background: linear-gradient(to top, rgba(72,11,21,0.5), rgba(72,11,21,0) 55%);
 }
 .reel-card--service:hover .reel-photo img{ transform: scale(1.04); }
-@media (prefers-reduced-motion: reduce){
-  .reel{ height: auto !important; }
-  .reel-pin{ position: static; padding-block: var(--space-4) var(--space-3); }
-  .reel-track{ width:auto; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom: var(--space-2); transform:none !important; }
-  .reel-card{ width: 74vw; max-width: 320px; scroll-snap-align: start; }
-}
 @media (max-width: 760px){
   .reel-pin{ padding-block: var(--space-3) var(--space-4); }
   .reel-head{ flex-direction: column; align-items: flex-start; gap: var(--space-2); padding-inline: var(--space-3); margin-bottom: var(--space-2); }
@@ -421,10 +415,6 @@
   background: rgba(72,11,21,0.25); pointer-events: none;
   width: 12px; height: 12px; margin: -6px 0 0 -6px;
 }
-@media (prefers-reduced-motion: reduce){
-  .services-call{ opacity: 1; transform: none; }
-}
-
 #services.section{ padding-top: var(--space-6); padding-bottom: var(--space-6); }
 #services .section-head{ margin-bottom: var(--space-5); }
 
